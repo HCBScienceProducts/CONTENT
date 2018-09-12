@@ -118,9 +118,6 @@ if length(edoxy)==1, edoxy=repmat(edoxy,nol,1); end
 % add CANYON-B carbonate estimates as well as phosphate and silicate
 paramnames={'AT';'CT';'pH';'pCO2';'SiOH4';'PO4'};
 cy=CANYONB_private(gtime(:),lat(:),lon(:),pres(:),temp(:),psal(:),doxy(:),paramnames,epres(:),etemp(:),epsal(:),edoxy(:));
-%for i=1:length(paramnames)
-%    cy.(['d' paramnames{i}])=[cy.(['d' paramnames{i}]).temp cy.(['d' paramnames{i}]).psal cy.(['d' paramnames{i}]).doxy cy.(['d' paramnames{i}]).pres];
-%end
 
 % copy to raw output and start mixing calculations
 paramnames={'AT';'CT';'pH';'pCO2'};
